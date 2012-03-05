@@ -28,4 +28,5 @@ web_interface/*/migrations/
 web_interface/files/programs
 web_interface/files/inputs
 web_interface/files/outputs
+checker/settings.py
 *~
