@@ -110,6 +110,11 @@ class CheckerSubmission(models.Model):
                     max_exceed = tl_hard - tl_soft
                     marks_factor = (max_exceed-exceed)/exceed
                     marks = round(case.marks*marks_factor, 2)
+		elif not correct:
+		    result['successful'] = False
+		    result['error'] = 'Incorrect'
+		    result['marks'] = 0
+		    break
 
             elif signal is self.TIMELIMIT_EXCEEDED:
                 result['successful'] = False
@@ -125,7 +130,7 @@ class CheckerSubmission(models.Model):
 
             result['marks'] += marks
 
-            return result
+	return result
 
 
     def submit_to_checker(self):
