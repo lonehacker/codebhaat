@@ -5,7 +5,7 @@ urlpatterns = patterns('',
     (r'^$', 'main.views.home'),
     url(r'^contest/$', 'main.views.contests', name='contest_list'),
 
-    url(r'^tutorial/(?P<contest_pk>\d+)/(?P<problem_pk>\d+)/$','main.views.tutorial_detail', name='tutorial_detail'),
+    
 
     url(r'^contest/(?P<contest_pk>\d+)/$', 'main.views.problem_list', name='contest_problems'),
 
@@ -19,7 +19,6 @@ urlpatterns = patterns('',
 
     url(r'^credits/$', 'main.views.credits'),
 
-    url(r'^contribute/$', 'main.views.contribute'),
 
     url(r'^error/$', direct_to_template , {'template':'main/error.html'}),
 )

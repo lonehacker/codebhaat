@@ -92,7 +92,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.comments',
     'django.contrib.humanize',
-    'djcelery',
+    #'djcelery',
     'main',
     'ticket',
     'django.contrib.flatpages',
@@ -102,14 +102,14 @@ INSTALLED_APPS = [
     'profiles',
     'captcha',
     'valuate',
-    'blog',
+    #'blog',
     'ischecker',
 
 ]
-
+"""
 if DEBUG:
     INSTALLED_APPS.append('south')
-
+"""
 INSTALLED_APPS = tuple(INSTALLED_APPS)
 
 #Custom Settings
